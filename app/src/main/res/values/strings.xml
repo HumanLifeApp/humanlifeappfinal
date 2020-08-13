@@ -10,11 +10,6 @@
     <string name="menu_text">Menu</string>
     <string name="loginAlert">Please click on the verification link sent you over mail to continue...</string>
 
-
-    <string name="about_us">We started with one entrepreneur, the creator with the idea.
-        Then we roped in a constructor with technical aspect of app making.
-Then we started hiring coders after we had a plan to execute. We started with 3 coders, who are just graduating from college. After 2 months we were able to get a graphic designer on board and AI coder. Now we have a team of 8 in total making the app. This app will be able to get consumers closer to professionals who can help them with mental health. We also will incorporate NGOs so they can also have a transparent process with their stakeholders. We have added features such as users checking their own Co2 consumption. For example how many times they flush in a day? We calculate with an average amount of water used for a flush according to govt data’s available in our country. India is our first focus country and then we would like to expand globally. We even have a human point wallet &amp; rating system for professionals and users.</string>
-
     <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
 
 </resources>
