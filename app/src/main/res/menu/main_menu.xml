@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_connect"
+            android:title="Connect"
+            android:icon="@drawable/connect"
+            android:iconTint="@color/colorAccent"/>
+
+        <item
+            android:id="@+id/nav_support"
+            android:title="Support+"
+            android:icon="@drawable/support"
+            android:iconTint="@color/colorAccent"/>
+
+
+
+        <item
+            android:id="@+id/nav_wallet"
+            android:title="Wallet"
+            android:icon="@drawable/wallet"
+            android:iconTint="@color/colorAccent"/>
+
+<!--        <item-->
+<!--            android:id="@+id/nav_chatBot"-->
+<!--            android:title="ChatBot"-->
+<!--            android:icon="@drawable/chat_bot"-->
+<!--            android:iconTint="@color/colorAccent"/>-->
+
+
+        <item
+            android:id="@+id/nav_the_earth"
+            android:title="On Earth"
+            android:icon="@drawable/earth"
+            android:iconTint="@color/colorAccent"/>
+        <item
+            android:id="@+id/nav_notification"
+            android:title="Notification"
+            android:icon="@drawable/bell_icon"
+            android:iconTint="@color/colorAccent"/>
+
+
+
+
+    </group>
+
+    <item android:title="Setting"
+        android:icon="@drawable/setting"
+        android:iconTint="@color/colorAccent">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_report"
+                    android:title="Report"
+                    android:icon="@drawable/report"
+                    android:iconTint="@color/colorAccent"
+
+                    />
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="Logout"
+                    android:icon="@drawable/logout"
+                    android:iconTint="@color/colorAccent"
+                    />
+
+
+            </group>
+
+        </menu>
+    </item>
+
+
+
+    <item android:title="Other">
+
+        <menu>
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_share"
+                    android:title="Share"
+                    android:icon="@drawable/share_icon"
+                    android:iconTint="@color/colorAccent"/>
+
+                <item
+                    android:id="@+id/nav_rate_us"
+                    android:title="Rate Us"
+                    android:icon="@drawable/rate_us_icon"
+                    android:iconTint="@color/colorAccent"/>
+
+            </group>
+
+        </menu>
+    </item>
+
+</menu>

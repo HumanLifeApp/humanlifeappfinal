@@ -1,0 +1,211 @@
+{
+  "project_info": {
+    "project_number": "676907502813",
+    "firebase_url": "https://maininfo-a3b3f.firebaseio.com",
+    "project_id": "maininfo-a3b3f",
+    "storage_bucket": "maininfo-a3b3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676907502813:android:92871c9743422931a51f34",
+        "android_client_info": {
+          "package_name": "com.example.HumanLife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676907502813-a145jfescju1o6l521j9sioon8816r3d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.HumanLife",
+            "certificate_hash": "7e63708ee4fc23643adf6e4349d08108a39fd446"
+          }
+        },
+        {
+          "client_id": "676907502813-6b6bg1s1unpas9kiapgrvrsetem1h6jd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.HumanLife",
+            "certificate_hash": "bbc2d9e06d072fc16918725137ef21676172d508"
+          }
+        },
+        {
+          "client_id": "676907502813-71s8iot5pk76lck3jtt97vrj5d59t7b6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.HumanLife",
+            "certificate_hash": "43efc58b0cf27ea977e91315777393978d369ba8"
+          }
+        },
+        {
+          "client_id": "676907502813-vqjtri4rmgd77l1rm2vst27t1ul4s0d2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWpX1cwzR6odrA7hTyAEM7g8_hMhDhf5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676907502813-vqjtri4rmgd77l1rm2vst27t1ul4s0d2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "676907502813-pcmq7h9pf3ok0dgidgp1amjqu07mtjed.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.HumanLife.HumanLife"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676907502813:android:722b56cdef71294ea51f34",
+        "android_client_info": {
+          "package_name": "com.example.humanlife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676907502813-ludhrq9407125ngbc545hcmm61iiu7tb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.humanlife",
+            "certificate_hash": "a513dd537d4b1230585d31ec2d7463c05636c70c"
+          }
+        },
+        {
+          "client_id": "676907502813-vqjtri4rmgd77l1rm2vst27t1ul4s0d2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWpX1cwzR6odrA7hTyAEM7g8_hMhDhf5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676907502813-vqjtri4rmgd77l1rm2vst27t1ul4s0d2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "676907502813-pcmq7h9pf3ok0dgidgp1amjqu07mtjed.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.HumanLife.HumanLife"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676907502813:android:013ae7869c5f20b5a51f34",
+        "android_client_info": {
+          "package_name": "com.fourfox.humanlifeex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676907502813-aejl0bcals0cfb31dlj9gia17lgdtbgl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fourfox.humanlifeex",
+            "certificate_hash": "bbc2d9e06d072fc16918725137ef21676172d508"
+          }
+        },
+        {
+          "client_id": "676907502813-mj8h2ppht70ehs6phjaoath6dm5cfh18.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fourfox.humanlifeex",
+            "certificate_hash": "43efc58b0cf27ea977e91315777393978d369ba8"
+          }
+        },
+        {
+          "client_id": "676907502813-vqjtri4rmgd77l1rm2vst27t1ul4s0d2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWpX1cwzR6odrA7hTyAEM7g8_hMhDhf5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676907502813-vqjtri4rmgd77l1rm2vst27t1ul4s0d2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "676907502813-pcmq7h9pf3ok0dgidgp1amjqu07mtjed.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.HumanLife.HumanLife"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676907502813:android:8c5bc148b7cd549aa51f34",
+        "android_client_info": {
+          "package_name": "com.humanlife.humanlifeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676907502813-9a8l3tja1mr5b085dldqrq7kn03871ud.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.humanlife.humanlifeapp",
+            "certificate_hash": "43efc58b0cf27ea977e91315777393978d369ba8"
+          }
+        },
+        {
+          "client_id": "676907502813-vqjtri4rmgd77l1rm2vst27t1ul4s0d2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWpX1cwzR6odrA7hTyAEM7g8_hMhDhf5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676907502813-vqjtri4rmgd77l1rm2vst27t1ul4s0d2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "676907502813-pcmq7h9pf3ok0dgidgp1amjqu07mtjed.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.HumanLife.HumanLife"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
