@@ -47,6 +47,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -103,7 +104,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     public ValueCallback<Uri[]> uploadMessage;
 
     String historyUrl="";
-
+    String idToken;
 
 
     @Override
@@ -183,7 +184,17 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 //menu = findViewById(R.id.main_menu)
 //       MenuItem notification = menu.findViewById(R.id.nav_notification);
 
-
+        mAuth.getCurrentUser().getIdToken(true)
+                .addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
+                    public void onComplete(@NonNull Task<GetTokenResult> task) {
+                        if (task.isSuccessful()) {
+                             idToken = task.getResult().getToken();
+                            Log.d("TOKEN123",idToken);
+                        } else {
+                            Toast.makeText(Home.this, (CharSequence) task.getException(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
         //Menu Hooks
        drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);

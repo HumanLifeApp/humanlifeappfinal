@@ -56,10 +56,10 @@
               "client_type": 3
             },
             {
-              "client_id": "676907502813-pcmq7h9pf3ok0dgidgp1amjqu07mtjed.apps.googleusercontent.com",
+              "client_id": "676907502813-6o0shlrfqjt4p0h0g0cel66aei395r22.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.HumanLife.HumanLife"
+                "bundle_id": "com.humanlife.humanlifeapp"
               }
             }
           ]
@@ -100,10 +100,10 @@
               "client_type": 3
             },
             {
-              "client_id": "676907502813-pcmq7h9pf3ok0dgidgp1amjqu07mtjed.apps.googleusercontent.com",
+              "client_id": "676907502813-6o0shlrfqjt4p0h0g0cel66aei395r22.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.HumanLife.HumanLife"
+                "bundle_id": "com.humanlife.humanlifeapp"
               }
             }
           ]
@@ -152,10 +152,10 @@
               "client_type": 3
             },
             {
-              "client_id": "676907502813-pcmq7h9pf3ok0dgidgp1amjqu07mtjed.apps.googleusercontent.com",
+              "client_id": "676907502813-6o0shlrfqjt4p0h0g0cel66aei395r22.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.HumanLife.HumanLife"
+                "bundle_id": "com.humanlife.humanlifeapp"
               }
             }
           ]
@@ -170,6 +170,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "676907502813-sm5mv5nbpmq4n1fopin94vmuaum0ipdt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.humanlife.humanlifeapp",
+            "certificate_hash": "70b519a617ace1ebe091cb978bfc11c4756dced3"
+          }
+        },
         {
           "client_id": "676907502813-9a8l3tja1mr5b085dldqrq7kn03871ud.apps.googleusercontent.com",
           "client_type": 1,
@@ -196,10 +204,10 @@
               "client_type": 3
             },
             {
-              "client_id": "676907502813-pcmq7h9pf3ok0dgidgp1amjqu07mtjed.apps.googleusercontent.com",
+              "client_id": "676907502813-6o0shlrfqjt4p0h0g0cel66aei395r22.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.HumanLife.HumanLife"
+                "bundle_id": "com.humanlife.humanlifeapp"
               }
             }
           ]
