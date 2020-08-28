@@ -286,6 +286,7 @@ public class Registration extends AppCompatActivity {
                             Reg_info_upload info_upload = new Reg_info_upload(city, dob, email, mobile, name, downloadUrl.toString());
 
                             mDatabaseRef.child(user.getUid()).setValue(info_upload);                    //Data upload on firebase database
+                            FirebaseDatabase.getInstance().getReference("dob").child(user.getUid()).child("date").setValue(dob);
                             Toast.makeText(Registration.this, "Registration Successful", Toast.LENGTH_LONG).show();
                             Log.d("Reg1"," not gmail ");
                             Intent intent = new Intent(Registration.this, ProfileQues.class);
