@@ -172,7 +172,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                                                 public void onSuccess(Void aVoid) {
 
                                                     // email sent
-                                                    Toast.makeText(SignUp.this, "Verification Link has been sent.", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(SignUp.this, "Verification Link has been sent.", Toast.LENGTH_LONG).show();
                                                 }
                                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -185,6 +185,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 //                            Log.d("RESO",user.getEmail());
                             progressB.setVisibility(View.GONE);
                             Toast.makeText(SignUp.this, "User Created.", Toast.LENGTH_SHORT).show();
+                            mAuth.signOut();
                             startActivity(new Intent(SignUp.this,Login.class));
                             finish();
                         } else {

@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:hint=" Phone no"
+            android:ems="10"
             android:paddingHorizontal="15dp"
             android:maxLength="10"
             android:textColor="@color/black" />

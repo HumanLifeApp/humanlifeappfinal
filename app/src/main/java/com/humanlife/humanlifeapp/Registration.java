@@ -2,6 +2,7 @@ package com.humanlife.humanlifeapp;
 
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -68,7 +69,8 @@ public class Registration extends AppCompatActivity {
         datePicker = findViewById(R.id.dob);
         et_city = findViewById(R.id.et_city);
         submit = findViewById(R.id.submit);
-
+        Resources resources = getResources();
+        mImageUri=Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + resources.getResourcePackageName(R.drawable.ic_baseline_account_circle_24) + '/' + resources.getResourceTypeName(R.drawable.ic_baseline_account_circle_24) + '/' + resources.getResourceEntryName(R.drawable.ic_baseline_account_circle_24) );
         mAuth = FirebaseAuth.getInstance();
 
         mStorageRef = FirebaseStorage.getInstance().getReference("images");
@@ -117,13 +119,14 @@ public class Registration extends AppCompatActivity {
                 et_email.setVisibility(View.GONE);
                 tv_email.setVisibility(View.VISIBLE);
                 tv_email.setText(email);
+
             }
             else if (method.equalsIgnoreCase("Google")) {
                 GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
                 if (acct != null) {
                     String personName = acct.getDisplayName();
                     String personGivenName = acct.getGivenName();
-                    String personEmail = acct.getEmail();
+                    String personEmail = acct.getEmail().trim();
 //                Uri personPhoto = acct.getPhotoUrl();
                     personPhoto = Uri.parse(String.valueOf(acct.getPhotoUrl()));
                     if (personName != null) {
@@ -133,7 +136,7 @@ public class Registration extends AppCompatActivity {
                     }
                     if (personEmail != null) {
                         et_email.setText(personEmail);
-                        et_email.setVisibility(View.INVISIBLE);
+                        et_email.setVisibility(View.GONE);
                         tv_email.setVisibility(View.VISIBLE);
                         tv_email.setText(personEmail);
                     }

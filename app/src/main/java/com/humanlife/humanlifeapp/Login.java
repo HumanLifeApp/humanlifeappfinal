@@ -288,13 +288,31 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             if(mAuth.getCurrentUser().isEmailVerified()) {
+                                Log.d("YESS","hey");
                                 // Sign in success, update UI with the signed-in user's information
                                 checkRegDBLogin();
                             }else{
                                 progressBar.setVisibility(View.GONE);
+                                mAuth.signOut();
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
                                 builder.setTitle("Failed!")
                                         .setMessage(R.string.loginAlert)
+                                        .setNegativeButton("Resend Link", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                mAuth.getCurrentUser().sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                    @Override
+                                                    public void onSuccess(Void aVoid) {
+                                                    Toast.makeText(Login.this, "Verification Link has been sent.", Toast.LENGTH_LONG).show();
+                                                    }
+                                                }).addOnFailureListener(new OnFailureListener() {
+                                                    @Override
+                                                    public void onFailure(@NonNull Exception e) {
+                                                        Toast.makeText(Login.this, "Failure: Please try again after sometime", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                });
+                                            }
+                                        })
                                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -309,7 +327,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                         } else {
                             // If sign in fails, display a message to the user.
                             progressBar.setVisibility(View.GONE);
-                            Toast.makeText(Login.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
 
                         }
                     }

@@ -84,9 +84,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     ImageView userPic;
     TextView userName;
     TextView userEmail;
-
-
-    private Menu menu;
     public int count = 0;
 
     private final static int FCR = 1;
@@ -252,7 +249,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
                 userName.setText(users.getName());
                 userEmail.setText(users.getEmail());
-                Glide.with(headerView).load(photoURL).placeholder(R.drawable.default_profile).into(userPic);
+                Glide.with(headerView).load(photoURL).placeholder(R.drawable.ic_baseline_account_circle_24).into(userPic);
 
             }
 
@@ -1094,7 +1091,6 @@ userNotification();
     public void logout() {
         mAuth.signOut();
         mGoogleSignInClient.signOut();
-        FirebaseAuth.getInstance().signOut();
 
         Intent intent = new Intent(Home.this,Login.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_CLEAR_TASK);
