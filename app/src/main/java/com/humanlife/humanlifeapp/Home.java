@@ -500,7 +500,7 @@ userNotification();
 //                    Notification_status users = dataSnapshot.getValue(Notification_status.class);
 //                    assert users != null;
                     String data = dataSnapshot.child("status").getValue().toString();
-                    Log.d("TAG!", data);
+                  //  Log.d("TAG!", data);
                     if (data.equals("Pending")) {
                         Log.d("RES1", data+"FR");
                         count++;
@@ -515,6 +515,7 @@ userNotification();
                         navigationView.getMenu().findItem(R.id.nav_notification).setIcon(R.drawable.bell_icon);
                         navigationView.getMenu().findItem(R.id.nav_notification).setTitle("Notification");
                         Log.d("RES1","something2");
+                        count=0;
 
                     }
 
@@ -549,7 +550,7 @@ userNotification();
                         navigationView.getMenu().findItem(R.id.nav_notification).setIcon(R.drawable.bell_icon);
                         navigationView.getMenu().findItem(R.id.nav_notification).setTitle("Notification");
                         Log.d("RES1","something2");
-
+                        count=0;
                     }
                 }
             }
@@ -583,7 +584,7 @@ userNotification();
                         navigationView.getMenu().findItem(R.id.nav_notification).setIcon(R.drawable.bell_icon);
                         navigationView.getMenu().findItem(R.id.nav_notification).setTitle("Notification");
                         Log.d("RES1","something2");
-
+                        count=0;
                     }
                 }
             }
@@ -616,7 +617,7 @@ userNotification();
                         navigationView.getMenu().findItem(R.id.nav_notification).setIcon(R.drawable.bell_icon);
                         navigationView.getMenu().findItem(R.id.nav_notification).setTitle("Notification");
                         Log.d("RES1","something2");
-
+                        count=0;
                     }
                 }
             }
@@ -649,7 +650,7 @@ userNotification();
                         navigationView.getMenu().findItem(R.id.nav_notification).setIcon(R.drawable.bell_icon);
                         navigationView.getMenu().findItem(R.id.nav_notification).setTitle("Notification");
                         Log.d("RES1","something2");
-
+                        count=0;
                     }
 
                 }
@@ -683,7 +684,7 @@ userNotification();
                         navigationView.getMenu().findItem(R.id.nav_notification).setIcon(R.drawable.bell_icon);
                         navigationView.getMenu().findItem(R.id.nav_notification).setTitle("Notification");
                         Log.d("RES1","something2");
-
+                        count=0;
                     }
 
                 }
@@ -697,6 +698,7 @@ userNotification();
 
 
         noti7.addValueEventListener(new ValueEventListener(){
+            String chatKey;
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -704,19 +706,29 @@ userNotification();
 //                    Notification_status users = dataSnapshot.getValue(Notification_status.class);
 //                    assert users != null;
                     // String data = dataSnapshot.getValue().toString();
-                    String chatKey=dataSnapshot.getKey();
 
-                    FirebaseDatabase.getInstance().getReference("chatMessages/"+chatKey).addValueEventListener(new ValueEventListener(){
+                    String friendid= dataSnapshot.child("friendId").getValue().toString();
+                    String userid= dataSnapshot.child("userId").getValue().toString();
+
+                    if(friendid.equals(uid) | userid.equals(uid)){
+                         chatKey=dataSnapshot.getKey();
+                    }
+
+                    FirebaseDatabase.getInstance().getReference("chatMessages/"+chatKey).
+                            addValueEventListener(new ValueEventListener(){
+
 
                         @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                                String status= dataSnapshot.child("status").getValue().toString();
-                                String userID= dataSnapshot.child("userId").getValue().toString();
+                        public void onDataChange(@NonNull DataSnapshot snapshot1) {
+                            for(DataSnapshot dataSnapshot1: snapshot1.getChildren()){
+                                String status= dataSnapshot1.child("status").getValue().toString();
+                                String userID= dataSnapshot1.child("userId").getValue().toString();
 
-                                if(status.equals("Unread") && !userID.equals(uid)){
+
+                                if(status.equals("Unread")){
                                     Log.d("RES1", status+"Msg");
                                     Log.d("RES1", userID+" Msg");
+                                    Log.d("RES1", chatKey+" Msgkey");
                                     count++;
                                 }
                                 if(count>0){
@@ -729,7 +741,7 @@ userNotification();
                                     navigationView.getMenu().findItem(R.id.nav_notification).setIcon(R.drawable.bell_icon);
                                     navigationView.getMenu().findItem(R.id.nav_notification).setTitle("Notification");
                                     Log.d("RES1","something2");
-
+                                    count=0;
                                 }
 
                             }
@@ -750,14 +762,19 @@ userNotification();
         });
 
         noti8.addValueEventListener(new ValueEventListener(){
-
+String chatKey;
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
 //                    Notification_status users = dataSnapshot.getValue(Notification_status.class);
 //                    assert users != null;
                     // String data = dataSnapshot.getValue().toString();
-                    String chatKey=dataSnapshot.getKey();
+                    String friendid= dataSnapshot.child("friendId").getValue().toString();
+                    String userid= dataSnapshot.child("userId").getValue().toString();
+
+                    if(friendid.equals(uid) | userid.equals(uid)){
+                        chatKey=dataSnapshot.getKey();
+                    }
 
                     FirebaseDatabase.getInstance().getReference("mental_chatMessages/"+chatKey).addValueEventListener(new ValueEventListener(){
 
@@ -784,7 +801,7 @@ userNotification();
                                         navigationView.getMenu().findItem(R.id.nav_notification).setIcon(R.drawable.bell_icon);
                                         navigationView.getMenu().findItem(R.id.nav_notification).setTitle("Notification");
                                         Log.d("RES1","something2");
-
+                                        count=0;
                                     }
                                 }
 
@@ -806,14 +823,20 @@ userNotification();
         });
 
         noti9.addValueEventListener(new ValueEventListener(){
-
+            String chatKey;
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
 //                    Notification_status users = dataSnapshot.getValue(Notification_status.class);
 //                    assert users != null;
                     // String data = dataSnapshot.getValue().toString();
-                    String chatKey=dataSnapshot.getKey();
+
+                    String friendid= dataSnapshot.child("friendId").getValue().toString();
+                    String userid= dataSnapshot.child("userId").getValue().toString();
+
+                    if(friendid.equals(uid) | userid.equals(uid)){
+                        chatKey=dataSnapshot.getKey();
+                    }
 
                     FirebaseDatabase.getInstance().getReference("financial_chatMessages/"+chatKey).addValueEventListener(new ValueEventListener(){
 
@@ -841,7 +864,7 @@ userNotification();
                                         navigationView.getMenu().findItem(R.id.nav_notification).setIcon(R.drawable.bell_icon);
                                         navigationView.getMenu().findItem(R.id.nav_notification).setTitle("Notification");
                                         Log.d("RES1","something2");
-
+                                        count=0;
                                     }
                                 }
                             }
