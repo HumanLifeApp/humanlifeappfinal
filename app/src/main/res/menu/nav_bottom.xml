@@ -12,9 +12,10 @@
         android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/profile_text" />
     <item
-        android:id="@+id/help_btn"
-        android:icon="@drawable/help_icon"
-        android:title="@string/help_text" />
+        android:id="@+id/connect_btn"
+        android:icon="@drawable/connect"
+        android:title="@string/connect"
+        android:iconTint="@color/white"/>
     <item
         android:id="@+id/menu_icon"
         android:icon="@drawable/side_menu"

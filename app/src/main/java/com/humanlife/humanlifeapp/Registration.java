@@ -70,7 +70,6 @@ public class Registration extends AppCompatActivity {
         et_city = findViewById(R.id.et_city);
         submit = findViewById(R.id.submit);
         Resources resources = getResources();
-        mImageUri=Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + resources.getResourcePackageName(R.drawable.ic_baseline_account_circle_24) + '/' + resources.getResourceTypeName(R.drawable.ic_baseline_account_circle_24) + '/' + resources.getResourceEntryName(R.drawable.ic_baseline_account_circle_24) );
         mAuth = FirebaseAuth.getInstance();
 
         mStorageRef = FirebaseStorage.getInstance().getReference("images");
@@ -204,10 +203,10 @@ public class Registration extends AppCompatActivity {
         final String email = et_email.getText().toString().trim();
         final String mobile = et_mobileno.getText().toString().trim();
         final String city = et_city.getText().toString().trim();
-        if (mImageUri == null&&personPhoto==null) {
-            Toast.makeText(this, "Please choose an image for profile", Toast.LENGTH_SHORT).show();
-            return;
-        }
+//        if (mImageUri == null&&personPhoto==null) {
+//            Toast.makeText(this, "Please choose an image for profile", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
         if (TextUtils.isEmpty(name)) {
             et_name.setError("Field can not be empty");
             et_name.requestFocus();
@@ -256,10 +255,15 @@ public class Registration extends AppCompatActivity {
 //                })
 
 
+        if((personPhoto != null) || (mImageUri == null)){
+       //     Log.d("TAG123",personPhoto.toString());
+            Reg_info_upload info_upload;
+            if(personPhoto==null)
+          info_upload = new Reg_info_upload(city, dob, email, mobile, name,null);
+            else{
+             info_upload = new Reg_info_upload(city, dob, email, mobile, name, personPhoto.toString());
 
-        if((personPhoto != null) && (mImageUri == null)){
-            Reg_info_upload info_upload = new Reg_info_upload(city, dob, email, mobile, name, personPhoto.toString());
-
+            }
             mDatabaseRef.child(user.getUid()).setValue(info_upload);                    //Data upload on firebase database
 
             Toast.makeText(Registration.this, "Registration Successful", Toast.LENGTH_LONG).show();

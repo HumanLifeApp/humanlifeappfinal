@@ -174,10 +174,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         coordinatorLayout = findViewById(R.id.coordinator);
 
         webView = findViewById(R.id.home_web);
-
+//        Log.d("1",webView.getUrl());
         bottomNavigationView = findViewById(R.id.bottom_nav);
        bottomNavigationView.setOnNavigationItemSelectedListener(bottomnavmethod);
-       bottomNavigationView.setSelectedItemId(R.id.home_btn);
+       bottomNavigationView.setSelectedItemId(R.id.profile_btn);
 //menu = findViewById(R.id.main_menu)
 //       MenuItem notification = menu.findViewById(R.id.nav_notification);
 
@@ -281,7 +281,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         webView.getSettings ().setUseWideViewPort (true);
         webView.getSettings ().setLoadWithOverviewMode (true);
         webView.getSettings().setBuiltInZoomControls(false);
-
+//        webView.loadUrl("https://maininfo-a3b3f.web.app/viewprofile.html?"+uid);
+//        Log.d("2",webView.getUrl());
 //        WebBackForwardList mWebBackForwardList = webView.copyBackForwardList();
 //        historyUrl = mWebBackForwardList.getItemAtIndex(mWebBackForwardList.getCurrentIndex()).getUrl();
 
@@ -306,23 +307,43 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 //   super.shouldOverrideUrlLoading(view, url);
-             //   Log.d("profile","current 1 URL = " + url);
+               // Log.d("profile","current 1 URL = " + url);
+//             if (url.equals("https://maininfo-a3b3f.web.app/viewprofile.html")){
+//                 bottomNavigationView.getMenu().getItem(1).setChecked(true);
+//             }
+//             else if (url.equals("https://maininfo-a3b3f.web.app/viewprofile.html?"+uid)){
+//                 bottomNavigationView.getMenu().getItem(1).setChecked(true);
+//             }
+//             else if (url.equals("https://maininfo-a3b3f.web.app/chat.html")){
+//                 bottomNavigationView.getMenu().getItem(2).setChecked(true);
+//             }
+//             else if (url.equals("https://maininfo-a3b3f.web.app/chat.html?"+uid)){
+//                 bottomNavigationView.getMenu().getItem(2).setChecked(true);
+//             }
+//             else if (url.equals("https://maininfo-a3b3f.web.app/homepagenew.html")){
+//                 bottomNavigationView.getMenu().getItem(0).setChecked(true);
+//             }
+//             else if (url.equals("https://maininfo-a3b3f.web.app/homepagenew.html?"+uid)){
+//                 bottomNavigationView.getMenu().getItem(0).setChecked(true);
+//             }
+
                 switch (url) {
                     case "https://maininfo-a3b3f.web.app/viewprofile.html":
                         bottomNavigationView.getMenu().getItem(1).setChecked(true);
 
                         break;
-                    case "https://maininfo-a3b3f.web.app/help2.html":
+
+                    case "https://maininfo-a3b3f.web.app/chat.html":
                         bottomNavigationView.getMenu().getItem(2).setChecked(true);
                         break;
 
-                    case "https://maininfo-a3b3f.web.app/mentalhelp.html?All":
-                        bottomNavigationView.getMenu().getItem(2).setChecked(true);
-                        break;
+//                    case "https://maininfo-a3b3f.web.app/mentalhelp.html?All":
+//                        bottomNavigationView.getMenu().getItem(2).setChecked(true);
+//                        break;
 
-                    case "https://maininfo-a3b3f.web.app/financialhelp.html?All":
-                        bottomNavigationView.getMenu().getItem(2).setChecked(true);
-                        break;
+//                    case "https://maininfo-a3b3f.web.app/financialhelp.html?All":
+//                        bottomNavigationView.getMenu().getItem(2).setChecked(true);
+//                        break;
 
                     case "https://maininfo-a3b3f.web.app/homepagenew.html":
                         bottomNavigationView.getMenu().getItem(0).setChecked(true);
@@ -363,7 +384,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         if(check!=null && check.equals("co2pageopen")){
             webView.loadUrl("https://maininfo-a3b3f.web.app/co2landpage.html?"+uid);
         }else {
-            webView.loadUrl("https://maininfo-a3b3f.web.app/homepagenew.html?" + uid);
+         //   webView.loadUrl("https://maininfo-a3b3f.web.app/homepagenew.html?" + uid);
+            webView.loadUrl("https://maininfo-a3b3f.web.app/viewprofile.html?" + uid);
         }
 
 
@@ -959,7 +981,7 @@ String chatKey;
             bottomNavigationView.getMenu().getItem(0).setChecked(true);
             //  webView.goBack();
         }
-        else if (webView.getOriginalUrl().equals("https://maininfo-a3b3f.web.app/help2.html?"+uid)){
+        else if (webView.getOriginalUrl().equals("https://maininfo-a3b3f.web.app/chat.html?"+uid)){
             bottomNavigationView.getMenu().getItem(2).setChecked(true);
             //  webView.goBack();
         }
@@ -992,15 +1014,20 @@ String chatKey;
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     switch (item.getItemId()) {
-                        case R.id.home_btn:
-                            webView.loadUrl("https://maininfo-a3b3f.web.app/homepagenew.html?"+uid);
-                           // userNotification();
-                            break;
+
                         case R.id.profile_btn:
                             webView.loadUrl("https://maininfo-a3b3f.web.app/viewprofile.html?"+uid);
                             break;
-                        case R.id.help_btn:
-                            webView.loadUrl("https://maininfo-a3b3f.web.app/help2.html?"+uid);
+
+                        case R.id.home_btn:
+                         //   Toast.makeText(Home.this, "hello", Toast.LENGTH_SHORT).show();
+                          //  webView.loadUrl("https://maininfo-a3b3f.web.app/viewprofile.html?"+uid);
+                           webView.loadUrl("https://maininfo-a3b3f.web.app/homepagenew.html?"+uid);
+                           // userNotification();
+                            break;
+
+                        case R.id.connect_btn:
+                            webView.loadUrl("https://maininfo-a3b3f.web.app/chat.html?"+uid);
                             break;
                         case R.id.menu_icon:
                             if (drawerLayout.isDrawerVisible(GravityCompat.START)){
@@ -1027,9 +1054,9 @@ String chatKey;
                 logout();
                 break;
 
-            case R.id.nav_connect:
+            case R.id.nav_help:
                 bottomNavigationView.getMenu().getItem(3).setChecked(true);
-                webView.loadUrl("https://maininfo-a3b3f.web.app/chat.html?"+uid);
+                webView.loadUrl("https://maininfo-a3b3f.web.app/help2.html?"+uid);
                 drawerLayout.closeDrawer(GravityCompat.START);
             //    startActivity(new Intent(Home.this,Connect.class));
                 break;

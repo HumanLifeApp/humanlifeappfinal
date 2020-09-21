@@ -11,5 +11,6 @@
     <string name="loginAlert">Please click on the verification link sent you over mail to continue...</string>
 
     <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="connect">Connect</string>
 
 </resources>
