@@ -83,7 +83,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     ImageView profile;
     ImageView userPic;
     TextView userName;
-    TextView userEmail;
+  //  TextView userEmail;
     public int count = 0;
 
     private final static int FCR = 1;
@@ -200,7 +200,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         final View headerView = navigationView.getHeaderView(0);
         userName = headerView.findViewById(R.id.user_name);
-        userEmail = headerView.findViewById(R.id.user_email);
+//        userEmail = headerView.findViewById(R.id.user_email);
         userPic = headerView.findViewById(R.id.user_photo);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -248,7 +248,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 Uri photoURL= Uri.parse(String.valueOf(users.getPhotoURL()));
 
                 userName.setText(users.getName());
-                userEmail.setText(users.getEmail());
+             //   userEmail.setText(users.getEmail());
                 Glide.with(headerView).load(photoURL).placeholder(R.drawable.ic_baseline_account_circle_24).into(userPic);
 
             }
@@ -1071,7 +1071,7 @@ String chatKey;
 
             case R.id.nav_support:
                 bottomNavigationView.getMenu().getItem(3).setChecked(true);
-                webView.loadUrl("https://maininfo-a3b3f.web.app/support.html?"+uid);
+                webView.loadUrl("https://maininfo-a3b3f.web.app/support2.html?"+uid);
                 drawerLayout.closeDrawer(GravityCompat.START);
                 // startActivity(new Intent(Home.this,Login.class));
                 break;

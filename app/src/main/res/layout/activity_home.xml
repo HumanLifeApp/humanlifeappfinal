@@ -32,7 +32,9 @@
                 android:layout_height="?attr/actionBarSize"
                 android:layout_alignParentBottom="true"
                 app:menu="@menu/nav_bottom"
-                android:background="@drawable/gradient_color"/>
+                app:itemIconTint="@drawable/bottom_navigation_color_selector"
+                app:itemTextColor="@drawable/bottom_navigation_color_selector"
+                android:background="@color/black"/>
         </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView

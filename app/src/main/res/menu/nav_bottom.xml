@@ -6,18 +6,21 @@
     <item
         android:id="@+id/home_btn"
         android:icon="@drawable/home_icon"
-        android:title="@string/home_text" />
+        android:title="@string/home_text"
+        android:iconTint="#70707A"/>
     <item
         android:id="@+id/profile_btn"
         android:icon="@drawable/ic_baseline_person_24"
-        android:title="@string/profile_text" />
+        android:title="@string/profile_text"
+        android:iconTint="#70707A"/>
     <item
         android:id="@+id/connect_btn"
         android:icon="@drawable/connect"
         android:title="@string/connect"
-        android:iconTint="@color/white"/>
+        android:iconTint="#70707A"/>
     <item
         android:id="@+id/menu_icon"
-        android:icon="@drawable/side_menu"
-        android:title="@string/more_text" />
+        android:icon="@drawable/dotted_more_icon"
+        android:title="@string/more_text"
+        android:iconTint="#70707A"/>
 </menu>
