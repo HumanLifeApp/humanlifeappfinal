@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
+
     >
 
     <item
@@ -13,14 +14,14 @@
         android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/profile_text"
         android:iconTint="#70707A"/>
-    <item
-        android:id="@+id/connect_btn"
-        android:icon="@drawable/connect"
-        android:title="@string/connect"
-        android:iconTint="#70707A"/>
+<!--    <item-->
+<!--        android:id="@+id/connect_btn"-->
+<!--        android:icon="@drawable/connect"-->
+<!--        android:title="@string/connect"-->
+<!--        android:iconTint="#70707A"/>-->
     <item
         android:id="@+id/menu_icon"
-        android:icon="@drawable/dotted_more_icon"
+        android:icon="@drawable/side_menu"
         android:title="@string/more_text"
         android:iconTint="#70707A"/>
 </menu>

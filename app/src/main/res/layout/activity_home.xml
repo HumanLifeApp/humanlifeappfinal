@@ -33,7 +33,7 @@
                 android:layout_alignParentBottom="true"
                 app:menu="@menu/nav_bottom"
                 app:itemIconTint="@drawable/bottom_navigation_color_selector"
-                app:itemTextColor="@drawable/bottom_navigation_color_selector"
+
                 android:background="@color/black"/>
         </RelativeLayout>
 

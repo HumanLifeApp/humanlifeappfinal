@@ -337,13 +337,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         bottomNavigationView.getMenu().getItem(2).setChecked(true);
                         break;
 
-//                    case "https://maininfo-a3b3f.web.app/mentalhelp.html?All":
-//                        bottomNavigationView.getMenu().getItem(2).setChecked(true);
-//                        break;
+                    case "https://maininfo-a3b3f.web.app/mentalhelp.html?All":
+                        bottomNavigationView.getMenu().getItem(2).setChecked(true);
+                        break;
 
-//                    case "https://maininfo-a3b3f.web.app/financialhelp.html?All":
-//                        bottomNavigationView.getMenu().getItem(2).setChecked(true);
-//                        break;
+                    case "https://maininfo-a3b3f.web.app/financialhelp.html?All":
+                        bottomNavigationView.getMenu().getItem(2).setChecked(true);
+                        break;
 
                     case "https://maininfo-a3b3f.web.app/homepagenew.html":
                         bottomNavigationView.getMenu().getItem(0).setChecked(true);
@@ -981,22 +981,22 @@ String chatKey;
             bottomNavigationView.getMenu().getItem(0).setChecked(true);
             //  webView.goBack();
         }
-        else if (webView.getOriginalUrl().equals("https://maininfo-a3b3f.web.app/chat.html?"+uid)){
-            bottomNavigationView.getMenu().getItem(2).setChecked(true);
-            //  webView.goBack();
-        }
+//        else if (webView.getOriginalUrl().equals("https://maininfo-a3b3f.web.app/chat.html?"+uid)){
+//            bottomNavigationView.getMenu().getItem(2).setChecked(true);
+//            //  webView.goBack();
+//        }
         else if (webView.getOriginalUrl().equals("https://maininfo-a3b3f.web.app/viewprofile.html?"+uid)){
             bottomNavigationView.getMenu().getItem(1).setChecked(true);
             //  webView.goBack();
         }
-        else if (webView.getOriginalUrl().equals("https://maininfo-a3b3f.web.app/mentalhelp.html?All")){
-            bottomNavigationView.getMenu().getItem(2).setChecked(true);
-            //  webView.goBack();
-        }
-        else if (webView.getOriginalUrl().equals("https://maininfo-a3b3f.web.app/financialhelp.html?All")){
-            bottomNavigationView.getMenu().getItem(2).setChecked(true);
-            //   webView.goBack();
-        }
+//        else if (webView.getOriginalUrl().equals("https://maininfo-a3b3f.web.app/mentalhelp.html?All")){
+//            bottomNavigationView.getMenu().getItem(2).setChecked(true);
+//            //  webView.goBack();
+//        }
+//        else if (webView.getOriginalUrl().equals("https://maininfo-a3b3f.web.app/financialhelp.html?All")){
+//            bottomNavigationView.getMenu().getItem(2).setChecked(true);
+//            //   webView.goBack();
+//        }
         else if (webView.getOriginalUrl().equals("https://maininfo-a3b3f.web.app/homepagenew.html")){
             bottomNavigationView.getMenu().getItem(0).setChecked(true);
             //   webView.goBack();
@@ -1026,9 +1026,9 @@ String chatKey;
                            // userNotification();
                             break;
 
-                        case R.id.connect_btn:
-                            webView.loadUrl("https://maininfo-a3b3f.web.app/chat.html?"+uid);
-                            break;
+//                        case R.id.connect_btn:
+//                            webView.loadUrl("https://maininfo-a3b3f.web.app/chat.html?"+uid);
+//                            break;
                         case R.id.menu_icon:
                             if (drawerLayout.isDrawerVisible(GravityCompat.START)){
                                 drawerLayout.closeDrawer(GravityCompat.START);
@@ -1054,8 +1054,15 @@ String chatKey;
                 logout();
                 break;
 
+            case R.id.nav_connect:
+                bottomNavigationView.getMenu().getItem(2).setChecked(true);
+                webView.loadUrl("https://maininfo-a3b3f.web.app/chat.html?"+uid);
+                drawerLayout.closeDrawer(GravityCompat.START);
+                //    startActivity(new Intent(Home.this,Connect.class));
+                break;
+
             case R.id.nav_help:
-                bottomNavigationView.getMenu().getItem(3).setChecked(true);
+                bottomNavigationView.getMenu().getItem(2).setChecked(true);
                 webView.loadUrl("https://maininfo-a3b3f.web.app/help2.html?"+uid);
                 drawerLayout.closeDrawer(GravityCompat.START);
             //    startActivity(new Intent(Home.this,Connect.class));
@@ -1070,28 +1077,28 @@ String chatKey;
 //                break;
 
             case R.id.nav_support:
-                bottomNavigationView.getMenu().getItem(3).setChecked(true);
+                bottomNavigationView.getMenu().getItem(2).setChecked(true);
                 webView.loadUrl("https://maininfo-a3b3f.web.app/support2.html?"+uid);
                 drawerLayout.closeDrawer(GravityCompat.START);
                 // startActivity(new Intent(Home.this,Login.class));
                 break;
 
             case R.id.nav_the_earth:
-                bottomNavigationView.getMenu().getItem(3).setChecked(true);
+                bottomNavigationView.getMenu().getItem(2).setChecked(true);
                 webView.loadUrl("https://maininfo-a3b3f.web.app/theearth.html?"+uid);
                 drawerLayout.closeDrawer(GravityCompat.START);
                 // startActivity(new Intent(Home.this,Login.class));
                 break;
 
             case R.id.nav_report:
-                bottomNavigationView.getMenu().getItem(3).setChecked(true);
+                bottomNavigationView.getMenu().getItem(2).setChecked(true);
                 webView.loadUrl("https://maininfo-a3b3f.web.app/contact.html?"+uid);
                 drawerLayout.closeDrawer(GravityCompat.START);
                 //  startActivity(new Intent(Home.this,Login.class));
                 break;
 
             case R.id.nav_wallet:
-                bottomNavigationView.getMenu().getItem(3).setChecked(true);
+                bottomNavigationView.getMenu().getItem(2).setChecked(true);
                 webView.loadUrl("https://maininfo-a3b3f.web.app/wallet.html?"+uid);
                 drawerLayout.closeDrawer(GravityCompat.START);
                 // startActivity(new Intent(Home.this,Login.class));
@@ -1100,25 +1107,25 @@ String chatKey;
 
 
             case R.id.nav_notification:
-                bottomNavigationView.getMenu().getItem(3).setChecked(true);
+                bottomNavigationView.getMenu().getItem(2).setChecked(true);
                 webView.loadUrl("https://maininfo-a3b3f.web.app/notification.html?"+uid);
                 drawerLayout.closeDrawer(GravityCompat.START);
                 // startActivity(new Intent(Home.this,Login.class));
                 break;
 
-            case R.id.nav_share:
-                bottomNavigationView.getMenu().getItem(3).setChecked(true);
-                drawerLayout.closeDrawer(GravityCompat.START);
-                shareApp("http://play.google.com/store/apps/details?id=" + this.getPackageName(), this);
-                // startActivity(new Intent(Home.this,Login.class));
-                break;
-
-            case R.id.nav_rate_us:
-                bottomNavigationView.getMenu().getItem(3).setChecked(true);
-                drawerLayout.closeDrawer(GravityCompat.START);
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + this.getPackageName())));
-                //  startActivity(new Intent(Home.this,Login.class));
-                break;
+//            case R.id.nav_share:
+//                bottomNavigationView.getMenu().getItem(3).setChecked(true);
+//                drawerLayout.closeDrawer(GravityCompat.START);
+//                shareApp("http://play.google.com/store/apps/details?id=" + this.getPackageName(), this);
+//                // startActivity(new Intent(Home.this,Login.class));
+//                break;
+//
+//            case R.id.nav_rate_us:
+//                bottomNavigationView.getMenu().getItem(3).setChecked(true);
+//                drawerLayout.closeDrawer(GravityCompat.START);
+//                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + this.getPackageName())));
+//                //  startActivity(new Intent(Home.this,Login.class));
+//                break;
 
             default:
                 drawerLayout.closeDrawer(GravityCompat.START);

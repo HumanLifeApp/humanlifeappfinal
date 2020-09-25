@@ -2,6 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_connect"
+            android:title="Connect"
+            android:icon="@drawable/connect"
+            android:iconTint="@color/colorAccent"/>
+
         <item
             android:id="@+id/nav_help"
             android:title="Help+"
@@ -74,25 +81,25 @@
 
 
 
-    <item android:title="Other">
+<!--    <item android:title="Other">-->
 
-        <menu>
-            <group android:checkableBehavior="none">
-                <item
-                    android:id="@+id/nav_share"
-                    android:title="Share"
-                    android:icon="@drawable/share_icon"
-                    android:iconTint="@color/colorAccent"/>
+<!--        <menu>-->
+<!--            <group android:checkableBehavior="none">-->
+<!--                <item-->
+<!--                    android:id="@+id/nav_share"-->
+<!--                    android:title="Share"-->
+<!--                    android:icon="@drawable/share_icon"-->
+<!--                    android:iconTint="@color/colorAccent"/>-->
 
-                <item
-                    android:id="@+id/nav_rate_us"
-                    android:title="Rate Us"
-                    android:icon="@drawable/rate_us_icon"
-                    android:iconTint="@color/colorAccent"/>
+<!--                <item-->
+<!--                    android:id="@+id/nav_rate_us"-->
+<!--                    android:title="Rate Us"-->
+<!--                    android:icon="@drawable/rate_us_icon"-->
+<!--                    android:iconTint="@color/colorAccent"/>-->
 
-            </group>
+<!--            </group>-->
 
-        </menu>
-    </item>
+<!--        </menu>-->
+<!--    </item>-->
 
 </menu>
